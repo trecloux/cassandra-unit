@@ -57,7 +57,7 @@ public class EmbeddedCassandraServerHelper {
             yamlFile = "/" + yamlFile;
         }
 
-        //rmdir(tmpDir);
+        rmdir(tmpDir);
         copy(yamlFile, tmpDir);
         File file = new File(tmpDir + yamlFile);
         startEmbeddedCassandra(file, tmpDir);
